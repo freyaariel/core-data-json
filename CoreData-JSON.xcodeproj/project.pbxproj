@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1941F8B71EFFBE2300455766 /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1941F8B61EFFBE2300455766 /* TestData.json */; };
 		199AE0341EF67C270004FB18 /* CoreData+JSON.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 199AE0311EF67C270004FB18 /* CoreData+JSON.h */; };
-		199AE04F1EF67FF90004FB18 /* CoreDataJSONTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199AE04E1EF67FF90004FB18 /* CoreDataJSONTest.swift */; };
+		199AE04F1EF67FF90004FB18 /* CoreDataJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199AE04E1EF67FF90004FB18 /* CoreDataJSONTests.swift */; };
 		199AE0511EF67FF90004FB18 /* libCoreDataJSON-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 199AE03E1EF67DA70004FB18 /* libCoreDataJSON-macOS.a */; };
 		199AE0591EF6BCD30004FB18 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 199AE0571EF6BCD30004FB18 /* TestModel.xcdatamodeld */; };
 		199AE06A1EF7AE990004FB18 /* CoreData+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 199AE0321EF67C270004FB18 /* CoreData+JSON.m */; };
@@ -36,10 +36,11 @@
 		199AE0321EF67C270004FB18 /* CoreData+JSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CoreData+JSON.m"; sourceTree = "<group>"; };
 		199AE03E1EF67DA70004FB18 /* libCoreDataJSON-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCoreDataJSON-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		199AE04C1EF67FF90004FB18 /* CoreDataJSON-macOS-Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreDataJSON-macOS-Test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		199AE04E1EF67FF90004FB18 /* CoreDataJSONTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataJSONTest.swift; sourceTree = "<group>"; };
+		199AE04E1EF67FF90004FB18 /* CoreDataJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataJSONTests.swift; sourceTree = "<group>"; };
 		199AE0501EF67FF90004FB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		199AE0581EF6BCD30004FB18 /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
-		19E1A68F1F1BB94E00D205DE /* CoreDataJSONTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataJSONTest.h; sourceTree = "<group>"; };
+		19E1A68F1F1BB94E00D205DE /* CoreDataJSONTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataJSONTests.h; sourceTree = "<group>"; };
+		3B64758127BAEAA000DB27B6 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +72,9 @@
 		199AE0251EF67C270004FB18 = {
 			isa = PBXGroup;
 			children = (
-				19E1A5E21F1B32B100D205DE /* Include */,
-				199AE0301EF67C270004FB18 /* Source */,
-				199AE04D1EF67FF90004FB18 /* Test */,
+				3B64758127BAEAA000DB27B6 /* Package.swift */,
+				199AE0301EF67C270004FB18 /* Sources */,
+				199AE04D1EF67FF90004FB18 /* Tests */,
 				199AE02F1EF67C270004FB18 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,32 +89,41 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		199AE0301EF67C270004FB18 /* Source */ = {
+		199AE0301EF67C270004FB18 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				199AE0321EF67C270004FB18 /* CoreData+JSON.m */,
+				3B64758427BAEAFD00DB27B6 /* CoreDataJSON */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		199AE04D1EF67FF90004FB18 /* Test */ = {
+		199AE04D1EF67FF90004FB18 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				19E1A68F1F1BB94E00D205DE /* CoreDataJSONTest.h */,
-				199AE04E1EF67FF90004FB18 /* CoreDataJSONTest.swift */,
+				3B64758327BAEAF900DB27B6 /* CoreDataJSONTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		3B64758327BAEAF900DB27B6 /* CoreDataJSONTests */ = {
+			isa = PBXGroup;
+			children = (
+				19E1A68F1F1BB94E00D205DE /* CoreDataJSONTests.h */,
+				199AE04E1EF67FF90004FB18 /* CoreDataJSONTests.swift */,
 				199AE0501EF67FF90004FB18 /* Info.plist */,
 				199AE0571EF6BCD30004FB18 /* TestModel.xcdatamodeld */,
 				1941F8B61EFFBE2300455766 /* TestData.json */,
 			);
-			path = Test;
+			path = CoreDataJSONTests;
 			sourceTree = "<group>";
 		};
-		19E1A5E21F1B32B100D205DE /* Include */ = {
+		3B64758427BAEAFD00DB27B6 /* CoreDataJSON */ = {
 			isa = PBXGroup;
 			children = (
 				199AE0311EF67C270004FB18 /* CoreData+JSON.h */,
+				199AE0321EF67C270004FB18 /* CoreData+JSON.m */,
 			);
-			path = Include;
+			path = CoreDataJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +220,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 199AE0251EF67C270004FB18;
@@ -256,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				199AE04F1EF67FF90004FB18 /* CoreDataJSONTest.swift in Sources */,
+				199AE04F1EF67FF90004FB18 /* CoreDataJSONTests.swift in Sources */,
 				199AE0591EF6BCD30004FB18 /* TestModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +438,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = Test/CoreDataJSONTest.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -445,7 +456,7 @@
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = Test/CoreDataJSONTest.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
