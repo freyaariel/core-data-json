@@ -181,7 +181,7 @@ static NSString * const JSONEntityRelationsKey  = @"relations";
      }];
 }
 
-- (NSUUID *)objectUUID
+- (NSUUID *)jsonObjectUUID
 {
     NSString* uri = self.objectID.URIRepresentation.absoluteString;
 
@@ -228,7 +228,7 @@ static NSString * const JSONEntityRelationsKey  = @"relations";
              NSMutableArray *relations = [NSMutableArray arrayWithCapacity:relationObjects.count];
              for (NSManagedObject *relationObject in relationObjects)
              {
-                 [relations addObject:relationObject.objectUUID.UUIDString];
+                 [relations addObject:relationObject.jsonObjectUUID.UUIDString];
              }
              // set the JSON value to an array of the relationship objects UUIDs
              relationships[relationshipName] = [NSArray arrayWithArray:relations];
@@ -236,14 +236,14 @@ static NSString * const JSONEntityRelationsKey  = @"relations";
          else
          {
              // set the JSON value to the relationship objects UUID
-             relationships[relationshipName] = [[relationship objectUUID] UUIDString];
+             relationships[relationshipName] = [[relationship jsonObjectUUID] UUIDString];
          }
      }];
 
     NSMutableDictionary *jsonObject = [NSMutableDictionary dictionary];
 
     jsonObject[JSONEntityNameKey] = self.entity.name;
-    jsonObject[JSONEntityIdKey] = self.objectUUID.UUIDString;
+    jsonObject[JSONEntityIdKey] = self.jsonObjectUUID.UUIDString;
     jsonObject[JSONEntityAttributesKey] = attributes;
     jsonObject[JSONEntityRelationsKey] = relationships;
     

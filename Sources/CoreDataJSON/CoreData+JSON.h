@@ -44,6 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSManagedObject (JSON)
 
 - (NSDictionary *)jsonObject;
+- (NSUUID *)jsonObjectUUID;
 
 @end
 
